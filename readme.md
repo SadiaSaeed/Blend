@@ -1,4 +1,4 @@
-<p align="center"><img src="{{ asset('frontend/img/logo.png') }}" /></p>
+<p align="center">(public/frontend/img/logo.png)</p>
 
 ## About BLEND
 
