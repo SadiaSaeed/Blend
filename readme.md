@@ -1,3 +1,5 @@
+<p align="center"><img src="{{ asset('frontend/img/logo.png') }}" /></p>
+
 ## About BLEND
 
 BLENDis an impressive LMS script which comprises of all the basic features that needed for online learning. This package includes responsive frontend website, instructor/admin dashboard with a backend template. Admin can manage every aspect of the system, while the instructors could create creative courses through an interactive curriculum with various types of course files such as audio, video, document and text.
@@ -56,6 +58,7 @@ Run the seeder to import mandatory values to the tables
 ```sh
 php artisan db:seed
 ```
+
 
 ## License
 BLEND is open-source software licensed under the [GPL-2.0 License](LICENSE).
