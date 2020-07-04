@@ -26,11 +26,10 @@
         <div class="row" style="flex-grow: 1;">
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2" id="logo">
                 <i class="fa fa-bars d-inline-block d-md-none mobile-nav"></i>
-                <a href="{{ route('home') }}" class="float-xl-right"><img src="{{ asset('frontend/img/logo.png') }}" width="100" height="23" /></a>
+                <a href="{{ route('home') }}" class="float-xl-right"><img src="{{ asset('frontend/img/logo.png') }}" /></a>
             </div>
             <div class="col-md-3 col-lg-6 col-xl-6 d-none d-md-block">
                 <div class="dropdown float-left" >
-                  <span id="dropdownMenuButton" data-toggle="dropdown">Categories &nbsp;<i class="fa fa-caret-down"></i></span>
                     <?php 
                         $categories = SiteHelpers::active_categories();
                     ?>
@@ -43,7 +42,7 @@
                     @endforeach
                   </div>
                 </div>
-            </div>
+            </div>    
 
             <div class="col-sm-5 col-md-3 col-lg-2 col-xl-2 d-none d-sm-block">
                 @if(Auth::check() && !Auth::user()->hasRole('instructor') && !Auth::user()->hasRole('admin'))
@@ -53,7 +52,7 @@
 
             <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2">
                 @guest
-                <a class="btn btn-learna" href="{{ route('login') }}">Login / Sign Up</a>
+                <a class="btn btn-learna" href="{{ route('login') }}">Login</a>
                 @else
                 <div class="dropdown float-xl-left float-sm-right float-right">
                   <span id="dropdownMenuButtonRight" data-toggle="dropdown">{{ Auth::user()->first_name }} &nbsp;<i class="fa fa-caret-down"></i></span>

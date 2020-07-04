@@ -4,12 +4,9 @@
     <div class="container-fluid p-0 home-content">
         <!-- banner start -->
         <div class="homepage-slide-blue">
-            <h1>{{ Sitehelpers::get_option('pageHome', 'banner_title') }}</h1>
-            <span class="title-sub-header">{{ Sitehelpers::get_option('pageHome', 'banner_text') }}</span>
+            <h1>Institute of Business Administration</h1>
+            <span class="title-sub-header">Leaders and Ideas for Tomorrow</span>
             <form method="GET" action="{{ route('course.list') }}">
-            <div class="searchbox-contrainer col-md-6 mx-auto">
-                <input name="keyword" type="text" class="searchbox d-none d-sm-inline-block" placeholder="Search for courses by course titles"><input name="keyword" type="text" class="searchbox d-inline-block d-sm-none" placeholder="Search for courses"><button type="submit" class="searchbox-submit"><i class="fa fa-search"></i></button>
-            </div>
             </form>
         </div>
         <!-- banner end -->
@@ -20,15 +17,8 @@
                           'discountTab' => 'Discount Courses',
                         );
         ?>
-        <nav class="clearfix secondary-nav seperator-head">
-            <ul class="secondary-nav-ul list mx-auto nav">
-                 <?php foreach ($tabs as $tab_key => $tab_value) { ?>
-                     <li class="nav-item">
-                         
-                     </li>
-                 <?php }?>
-            </ul>
-        </nav>
+        
+    
 
         <!-- course list start -->
         <div class="container tab-content">
@@ -79,7 +69,65 @@
 
         </div>
         <!-- course list end -->
+           <!-- instructor block start -->
+           <article class="instructor-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center seperator-head mt-3">
+                        <h3>IBA Notice Board</h3>
+                    </div>
+                </div>
+                
+                <div class="row mt-4 mb-5">
+                    @foreach ($instructors as $instructor)
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="instructor-box mx-auto text-center">
+                        <a href="{{ route('instructor.view', $instructor->instructor_slug) }}">
+                            <main>
+                                <img src="@if(Storage::exists($instructor->instructor_image)){{ Storage::url($instructor->instructor_image) }}@else{{ asset('backend/assets/images/course_detail_thumb.jpg') }}@endif">
+                                <div class="col-md-12">
+                                <h6 class="instructor-title">Revised Admission Policy</h6>
+                                        <p style="text-align: justify;">Our students are our number one priority and we want to assure them that minimizing disruption and loss in education for our current and prospective students is our focus at this time. We have 
+                                            therefore made changes in our policies to cater to the developments for our prospective students. Click here to further discover about policy changes.</p>
+                                </div>
+                            </main>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="instructor-box mx-auto text-center">
+                        <a href="{{ route('instructor.view', $instructor->instructor_slug) }}">
+                            <main>
+                                <img src="@if(Storage::exists($instructor->instructor_image)){{ Storage::url($instructor->instructor_image) }}@else{{ asset('backend/assets/images/course_detail_thumb.jpg') }}@endif">
+                                <div class="col-md-12">
+                                <h6 class="instructor-title">Admissions 2020</h6>
+                                        <p style="text-align: justify;">Our students are our number one priority and we want to assure them that minimizing disruption and loss in education for our current and prospective students is our focus at this time. We have 
+                                            therefore made changes in our policies to cater to the developments for our prospective students. Click here to further discover about policy changes.</p>
+                                </div>
+                            </main>
+                        </a>
+                        </div>
+                    </div>
+                @endforeach
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="instructor-box mx-auto text-center">
+                        <a href="{{ route('instructor.view', $instructor->instructor_slug) }}">
+                            <main>
+                                <img src="@if(Storage::exists($instructor->instructor_image)){{ Storage::url($instructor->instructor_image) }}@else{{ asset('backend/assets/images/course_detail_thumb.jpg') }}@endif">
+                                <div class="col-md-12">
+                                <h6 class="instructor-title">IBA Financial Assistance</h6>
+                                        <p style="text-align: justify;">The IBA offers financial assistance to deserving students in the form of various Financial Assistances mechanisms. IBA has a dedicated Financial Assistance Office and Financial Assistance Committee who administer all students financial need related affairs.
+                                            Read further about our financial aid process.</p>
+                                </div>
+                            </main>
+                        </a>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
+        </article>
+        <!-- instructor block end -->
         <!-- dummy block start -->
         <article class="learn-block">
             <div class="container">
@@ -87,7 +135,6 @@
                     <div class="col-xl-6 col-lg-6 col-md-6">
                         <h3 class="dblock-heading">{{ Sitehelpers::get_option('pageHome', 'learn_block_title') }}</h3>
                         <p class="dblock-text">{!! Sitehelpers::get_option('pageHome', 'learn_block_text') !!}</p>
-                        <a href="{{ route('course.list') }}" class="btn btn-ulearn">Explore Courses</a>
                     </div>
 
                     <div class="col-xl-6 col-lg-6 col-md-6 vertical-align">
@@ -98,36 +145,7 @@
         </article>
         <!-- dummy block end -->
 
-        <!-- instructor block start -->
-        <article class="instructor-block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center seperator-head mt-3">
-                        <h3>Our Instructors</h3>
-                        <p class="mt-3">{{ Sitehelpers::get_option('pageHome', 'instructor_text') }}</p>
-                    </div>
-                </div>
-                
-                <div class="row mt-4 mb-5">
-                    @foreach ($instructors as $instructor) 
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="instructor-box mx-auto text-center">
-                        <a href="{{ route('instructor.view', $instructor->instructor_slug) }}">
-                            <main>
-                                <img src="@if(Storage::exists($instructor->instructor_image)){{ Storage::url($instructor->instructor_image) }}@else{{ asset('backend/assets/images/course_detail_thumb.jpg') }}@endif">
-                                <div class="col-md-12">
-                                    <h6 class="instructor-title">{{ $instructor->first_name.' '.$instructor->last_name }}</h6>
-                                    <p>{!! mb_strimwidth($instructor->biography, 0, 120, ".....") !!}</p>
-                                </div>
-                            </main>
-                        </a>
-                        </div>
-                    </div>
-                @endforeach
-                </div>
-            </div>
-        </article>
-        <!-- instructor block end -->
+     
 
     </div>
     <!-- content end -->

@@ -19,7 +19,7 @@ class ConfigTableSeeder extends Seeder
             'id'=>1,
             'code'=>'pageHome',
             'option_key'=>'banner_title',
-            'option_value'=>'Learn courses online'
+            'option_value'=>'Institute of Business Administration'
             ] );
                         
             Config::create( [
@@ -282,7 +282,7 @@ class ConfigTableSeeder extends Seeder
             'id'=>12,
             'code'=>'settingGeneral',
             'option_key'=>'meta_key',
-            'option_value'=>'Learn courses online'
+            'option_value'=>'Institute of Business Administration'
             ] );
                         
             Config::create( [

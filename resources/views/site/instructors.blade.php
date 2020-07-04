@@ -33,8 +33,9 @@
                                 <main>
                                     <img src="@if(Storage::exists($instructor->instructor_image)){{ Storage::url($instructor->instructor_image) }}@else{{ asset('backend/assets/images/course_detail_thumb.jpg') }}@endif">
                                     <div class="col-md-12">
-                                        <h6 class="instructor-title">{{ $instructor->first_name.' '.$instructor->last_name }}</h6>
-                                        <p>{!! mb_strimwidth($instructor->biography, 0, 120, ".....") !!}</p>
+                                        <h6 class="instructor-title">Admissions 2020</h6>
+                                        <p>Our students are our number one priority and we want to assure them that minimizing disruption and loss in education for our current and prospective students is our focus at this time. We have 
+                                            therefore made changes in our policies to cater to the developments for our prospective students. Click here to further discover about policy changes.</p>
                                     </div>
                                 </main>
                             </a>
