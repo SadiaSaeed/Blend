@@ -1,4 +1,4 @@
-<p align="center">(public/frontend/img/logo.png)</p>
+<p align="center">![BLEND](public/frontend/img/logo.png)</p>
 
 ## About BLEND
 
