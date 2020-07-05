@@ -69,64 +69,7 @@
 
         </div>
         <!-- course list end -->
-           <!-- instructor block start -->
-           <article class="instructor-block" >
-            <div class="container" style="align: center;">
-                <div class="row">
-                    <div class="col-12 text-center seperator-head mt-3">
-                        <h3>IBA Notice Board</h3>
-                    </div>
-                </div>
-                
-                <div class="row mt-4 mb-5">
-                    @foreach ($instructors as $instructor)
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="instructor-box mx-auto text-center">
-                        <a href="{{ route('instructor.view', $instructor->instructor_slug) }}">
-                            <main>
-                                <img src="@if(Storage::exists($instructor->instructor_image)){{ Storage::url($instructor->instructor_image) }}@else{{ asset('backend/assets/images/course_detail_thumb.jpg') }}@endif">
-                                <div class="col-md-12">
-                                <h6 class="instructor-title">Revised Admission Policy</h6>
-                                        <p style="text-align: justify;">In the wake of COVID-19 constraints, the IBA Karachi has decided to overhaul the admission process for its undergraduate programs. The aptitude test scheduled for July 5, 2020 for BBA, BS Accounting & Finance, BS Economics and BS Social Sciences & Liberal Arts programs has been substituted with an Alternative Assessment Criteria.</p>
-                                </div>
-                            </main>
-                        </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="instructor-box mx-auto text-center">
-                        <a href="{{ route('instructor.view', $instructor->instructor_slug) }}">
-                            <main>
-                                <img src="@if(Storage::exists($instructor->instructor_image)){{ Storage::url($instructor->instructor_image) }}@else{{ asset('backend/assets/images/ibanews1.jpg') }}@endif">
-                                <div class="col-md-12">
-                                <h6 class="instructor-title">Admissions 2020</h6>
-                                        <p style="text-align: justify;">Our students are our number one priority and we want to assure them that minimizing disruption and loss in education for our current and prospective students is our focus at this time. We have 
-                                            therefore made changes in our policies to cater to the developments for our prospective students. Click here to further discover about policy changes.</p>
-                                </div>
-                            </main>
-                        </a>
-                        </div>
-                    </div>
-                @endforeach
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="instructor-box mx-auto text-center">
-                        <a href="{{ route('instructor.view', $instructor->instructor_slug) }}">
-                            <main>
-                                <img src="@if(Storage::exists($instructor->instructor_image)){{ Storage::url($instructor->instructor_image) }}@else{{ asset('backend/assets/images/ibanews2.jpg') }}@endif">
-                                <div class="col-md-12">
-                                <h6 class="instructor-title">IBA Financial Assistance</h6>
-                                        <p style="text-align: justify;">The IBA offers financial assistance to deserving students in the form of various Financial Assistances mechanisms. IBA has a dedicated Financial Assistance Office and Financial Assistance Committee who administer all students financial need related affairs.
-                                            Read further about our financial aid process.</p>
-                                </div>
-                            </main>
-                        </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </article>
-        <!-- instructor block end -->
+           
         <!-- dummy block start -->
         <article class="learn-block">
             <div class="container">

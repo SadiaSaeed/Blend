@@ -63,42 +63,7 @@
                                 <button type="submit" class="btn btn-lg btn-block login-page-button">Reset Password</button>
                             </div>
 
-                            <div class="hr-container">
-                               <hr class="hr-inline" align="left">
-                               <span class="hr-text"> or </span>
-                               <hr class="hr-inline" align="right">
-                            </div>
-
-                            <div class="form-group">
-                                <a href="{{ url('login/facebook') }}" class="btn btn-lg btn-block social-btn facebook-btn">
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <i class="fab fa-facebook-f float-right"></i>
-                                        </div>
-                                        <div class="col-9">
-                                            <span>
-                                            Login with Facebook
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="form-group">
-                                <button type="button" class="btn btn-lg btn-block social-btn google-btn">
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <i class="fab fa-google-plus-g float-right"></i>
-                                        </div>
-                                        <div class="col-9">
-                                            <span>
-                                            Login with Google plus
-                                            </span>
-                                        </div>
-                                    </div>
-                                </button>
-                            </div>
-
+                        
                         </div>
                         </form>
                     </div>
