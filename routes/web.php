@@ -12,6 +12,13 @@
 */
 Route::get('/', 'HomeController@index')->name('home');
 Auth::routes();
+
+Route::get('notes', 'NotesController@index');
+Route::get('notes/create', 'NotesController@create');
+Route::post('notes/create', 'NotesController@store');
+Route::get('notes/edit/{note}', 'NotesController@edit');
+Route::patch('notes/edit/{note}', 'NotesController@update');
+
 Route::get('logout', 'Auth\LoginController@logout')->name('logOut');
 
 Route::get('/login/{social}','Auth\LoginController@socialLogin')->where('social','twitter|facebook|linkedin|google|github|bitbucket');

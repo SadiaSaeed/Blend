@@ -13,6 +13,10 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 require('./components/TopBar');
+Vue.component('edit-note', require('./components/EditNote.vue'));
+const app = new Vue({
+  el: 'blend'
+});
 
 import React from 'react';
 import { render } from 'react-dom';
@@ -36,3 +40,6 @@ render(
      </Router>,
   document.getElementById('course-enroll-container')
 );
+
+
+
