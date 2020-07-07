@@ -5,8 +5,8 @@
  *
  * @category  File
  * @package   User
- * @author    Mohamed Yahya
- * @copyright ULEARN  
+ * @author    Team Blend
+ * @copyright BLEND  
  * @license   BSD Licence
  * @link      Link
  */
@@ -35,8 +35,8 @@ use Session;
  *
  * @category  Class
  * @package   User
- * @author    Mohamed Yahya
- * @copyright ULEARN
+ * @author    Team Blend
+ * @copyright BLEND
  * @license   BSD Licence
  * @link      Link
  */

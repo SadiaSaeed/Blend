@@ -35,7 +35,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Library\\VideoHelpers' => $baseDir . '/app/Library/VideoHelpers.php',
-    'App\\Library\\ulearnHelpers' => $baseDir . '/app/Library/ulearnHelpers.php',
+    'App\\Library\\BLENDHelpers' => $baseDir . '/app/Library/BLENDHelpers.php',
     'App\\Mail\\ContactAdmin' => $baseDir . '/app/Mail/ContactAdmin.php',
     'App\\Mail\\ContactInstructor' => $baseDir . '/app/Mail/ContactInstructor.php',
     'App\\Models\\Blog' => $baseDir . '/app/Models/Blog.php',

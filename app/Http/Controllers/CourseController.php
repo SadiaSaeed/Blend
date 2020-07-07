@@ -984,7 +984,7 @@ if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {               $ffmpeg_path = b
                     'status'=>true,
                     'file_id'=> $courseFiles->id,
                     'file_title'=> $file_title,
-                    'file_size'=> \ulearnHelpers::HumanFileSize($file_size)
+                    'file_size'=> \BLENDHelpers::HumanFileSize($file_size)
                 );
             }else{
                 $return_data = array(

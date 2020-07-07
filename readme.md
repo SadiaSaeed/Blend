@@ -27,9 +27,9 @@ BLEND is an impressive LMS script which comprises of all the basic features that
 
 |    Role       |        Email ID        |   Password    |
 | ------------- | ---------------------  | ------------- |
-|    Admin      | admin@ulearn.com       |    secret     |
-|    Instructor | instructor@ulearn.com  |    secret     |
-|    Student    | student@ulearn.com     |    secret     |
+|    Admin      | admin@BLEND.com       |    secret     |
+|    Instructor | instructor@BLEND.com  |    secret     |
+|    Student    | student@BLEND.com     |    secret     |
 
 ## Installation
 In the root folder, find the .env file and change the following values

@@ -66,7 +66,7 @@ code{border:1px solid #99c5ff;}
 .navbar-brand{float:left;height:4.715rem;padding:1.5715rem 1.429rem;margin:0;font-size:1.286rem;font-weight:500;line-height:22px;}
 .navbar-brand:focus,.navbar-brand:hover{text-decoration:none;}
 .navbar-brand>img.navbar-brand-logo{display:inline-block;}
-.navbar-brand-logo{display:inline-block;height:2.286rem;margin-top:-.357rem;}
+.navbar-brand-logo{display:inline-block;height:2.286rem;margin-top:-2.357rem;}
 .navbar-brand-text{margin-left:.429rem;}
 @media (max-width:991px){
 .navbar-brand-center{position:absolute;left:50%;-webkit-transform:translate(-50%,0);-ms-transform:translate(-50%,0);-o-transform:translate(-50%,0);transform:translate(-50%,0);}
@@ -118,7 +118,7 @@ h3 small{font-weight:300;}
 .site-navbar .navbar-header .navbar-toggler{color:#fff;}
 .site-navbar .navbar-header .hamburger .hamburger-bar,.site-navbar .navbar-header .hamburger::after,.site-navbar .navbar-header .hamburger::before{background-color:#fff;}
 .site-navbar .navbar-header .navbar-brand{font-family:Roboto,sans-serif;color:#fff;cursor:pointer;}
-.site-navbar .navbar-container{background-color:#fff;}
+.site-navbar .navbar-container{background-color:#3e8ef7;}
 @media (min-width:992px){
 .site-navbar .navbar-container{margin-left:260px;}
 }

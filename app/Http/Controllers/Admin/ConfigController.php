@@ -5,8 +5,8 @@
  *
  * @category  File
  * @package   Config
- * @author    Mohamed Yahya
- * @copyright ULEARN  
+ * @author    Team Blend
+ * @copyright BLEND  
  * @license   BSD Licence
  * @link      Link
  */
@@ -27,8 +27,8 @@ use SiteHelpers;
  *
  * @category  Class
  * @package   Config
- * @author    Mohamed Yahya
- * @copyright ULEARN
+ * @author    Team Blend
+ * @copyright BLEND
  * @license   BSD Licence
  * @link      Link
  */

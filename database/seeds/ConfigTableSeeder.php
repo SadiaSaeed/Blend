@@ -192,7 +192,7 @@ class ConfigTableSeeder extends Seeder
             'id'=>11,
             'code'=>'settingGeneral',
             'option_key'=>'application_name',
-            'option_value'=>'Ulearn'
+            'option_value'=>'BLEND'
             ] );
                         
             Config::create( [
@@ -220,7 +220,7 @@ class ConfigTableSeeder extends Seeder
                 'id'=>15,
                 'code'=>'settingGeneral',
                 'option_key'=>'admin_email',
-                'option_value'=>'admin@ulearn.com'
+                'option_value'=>'admin@BLEND.com'
                 ] );
                         
             Config::create( [

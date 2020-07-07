@@ -5,8 +5,8 @@
  *
  * @category  File
  * @package   User
- * @author    Mohamed Yahya
- * @copyright ULEARN  
+ * @author    Team Blend
+ * @copyright BLEND  
  * @license   BSD Licence
  * @link      Link
  */
@@ -23,8 +23,8 @@ use Illuminate\Support\Facades\Validator;
  *
  * @category  Class
  * @package   User
- * @author    Mohamed Yahya
- * @copyright ULEARN
+ * @author    Team Blend
+ * @copyright BLEND
  * @license   BSD Licence
  * @link      Link
  */

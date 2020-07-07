@@ -568,7 +568,7 @@ class ComposerStaticInitf7e3eeb0362618f5035ab6c201d00357
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Library\\VideoHelpers' => __DIR__ . '/../..' . '/app/Library/VideoHelpers.php',
-        'App\\Library\\ulearnHelpers' => __DIR__ . '/../..' . '/app/Library/ulearnHelpers.php',
+        'App\\Library\\BLENDHelpers' => __DIR__ . '/../..' . '/app/Library/BLENDHelpers.php',
         'App\\Mail\\ContactAdmin' => __DIR__ . '/../..' . '/app/Mail/ContactAdmin.php',
         'App\\Mail\\ContactInstructor' => __DIR__ . '/../..' . '/app/Mail/ContactInstructor.php',
         'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',

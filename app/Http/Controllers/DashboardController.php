@@ -5,8 +5,8 @@
  *
  * @category  File
  * @package   Dashboard
- * @author    Mohamed Yahya
- * @copyright ULEARN  
+ * @author    Team Blend
+ * @copyright BLEND  
  * @license   BSD Licence
  * @link      Link
  */
@@ -20,8 +20,8 @@ use Illuminate\Http\Request;
  *
  * @category  Class
  * @package   Dashboard
- * @author    Mohamed Yahya
- * @copyright ULEARN
+ * @author    Team Blend
+ * @copyright BLEND
  * @license   BSD Licence
  * @link      Link
  */

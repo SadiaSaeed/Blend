@@ -1,13 +1,13 @@
 {
-    "name": "ulearnpro/ulearn",
+    "name": "BLENDpro/BLEND",
     "description": "LMS script built on Laravel 5.8 and React JS 16.4",
     "keywords": ["lms", "learning-management-system", "laravel", "reactjs"],
-    "homepage": "https://www.ulearnpro.com",
+    "homepage": "https://www.BLENDpro.com",
     "license": "MIT",
     "authors": [
         {
-            "name": "Mohamed Yahya",
-            "email": "ulearnpro@gmail.com"
+            "name": "Team Blend",
+            "email": "BLENDpro@gmail.com"
         }
     ],
     "require": {
