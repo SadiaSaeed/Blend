@@ -72,10 +72,16 @@
                 placeholder="Course Duration" value="{{ $course->duration }}" />
         </div>
 
-        <div class="form-group col-md-8">
+        <div class="form-group col-md-4">
             <label class="form-control-label">Keywords</label>
             <input type="text" class="form-control tagsinput" name="keywords" 
                 placeholder="Keywords" value="{{ $course->keywords }}" />
+        </div>
+
+        <div class="form-group col-md-4">
+            <label class="form-control-label">Credits</label>
+            <input type="text" class="form-control tagsinput" name="Credits" 
+                placeholder="Credits" value="{{ $course->Credits }}" />
         </div>
 
         <div class="form-group col-md-4">

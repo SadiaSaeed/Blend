@@ -16,10 +16,10 @@
             <div class="card-watermark darker font-size-80 m-15"><i class="fa fa-chalkboard" aria-hidden="true"></i></div>
             <div class="counter counter-md counter-inverse text-left">
               <div class="counter-number-group">
-                <span class="counter-number">1</span>
-                <span class="counter-number-related text-capitalize">students</span>
+                <span class="counter-number">{{count($courses)}}</span>
+                <span class="counter-number-related text-capitalize">Courses Enrolled</span>
               </div>
-              <div class="counter-label text-capitalize">in total</div>
+              <div class="counter-label text-capitalize">This Semester</div>
             </div>
           </div>
           <!-- End Card -->
@@ -32,9 +32,9 @@
             <div class="counter counter-md counter-inverse text-left">
               <div class="counter-number-group">
                 <span class="counter-number">2</span>
-                <span class="counter-number-related text-capitalize">instructors</span>
+                <span class="counter-number-related text-capitalize">GPA</span>
               </div>
-              <div class="counter-label text-capitalize">in total</div>
+              <div class="counter-label text-capitalize">This Semester</div>
             </div>
           </div>
           <!-- End Card -->
@@ -47,9 +47,9 @@
             <div class="counter counter-md counter-inverse text-left">
               <div class="counter-number-group">
                 <span class="counter-number">3</span>
-                <span class="counter-number-related text-capitalize">courses</span>
+                <span class="counter-number-related text-capitalize">CGPA</span>
               </div>
-              <div class="counter-label text-capitalize">in total</div>
+              <div class="counter-label text-capitalize">overall</div>
             </div>
           </div>
           <!-- End Card -->
