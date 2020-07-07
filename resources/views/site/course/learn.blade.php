@@ -187,6 +187,7 @@
                         <li><i class="far fa-play-circle"></i>Videos: {{ $videos_count }}</li>
                         <li><i class="far fa-address-card"></i>Certificate of Completion</li>
                         <li><i class="fas fa-file-download"></i>Downloadable Resources</li>
+                        <li><i class="fas fa-file-download"></i><a href="{{ url('notes') }}">Student's Notes</a></li>
                     </ul>
                 </section>
                 

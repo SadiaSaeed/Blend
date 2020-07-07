@@ -498,6 +498,7 @@ class CourseController extends Controller
         $course->category_id = $request->input('category_id');
         $course->instruction_level_id = $request->input('instruction_level_id');
         $course->keywords = $request->input('keywords');
+        $course->Credits = $request->input('Credits');
         $course->overview = $request->input('overview');
 
         $course->duration = $request->input('duration');
