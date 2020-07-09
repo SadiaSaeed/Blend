@@ -29,14 +29,12 @@
                         <h3>IBA Notice Board</h3>
                     </div>
                 </div>
-                
                 <div class="row mt-4 mb-5">
-                    @foreach ($instructors as $instructor)
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="instructor-box mx-auto text-center">
-                        <a href="{{ route('instructor.view', $instructor->instructor_slug) }}">
+                        <a href="{{ route('instructor.view', 'angela-yu') }}">
                             <main>
-                                <img src="@if(Storage::exists($instructor->instructor_image)){{ Storage::url($instructor->instructor_image) }}@else{{ asset('backend/assets/images/course_detail_thumb.jpg') }}@endif">
+                                <img src='backend/assets/images/course_detail_thumb.jpg'>
                                 <div class="col-md-12">
                                 <h6 class="instructor-title">Revised Admission Policy</h6>
                                         <p style="text-align: justify;">In the wake of COVID-19 constraints, the IBA Karachi has decided to overhaul the admission process for its undergraduate programs. The aptitude test scheduled for July 5, 2020 for BBA, BS Accounting & Finance, BS Economics and BS Social Sciences & Liberal Arts programs has been substituted with an Alternative Assessment Criteria.</p>
@@ -47,9 +45,9 @@
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="instructor-box mx-auto text-center">
-                        <a href="{{ route('instructor.view', $instructor->instructor_slug) }}">
+                        <a href="{{ route('instructor.view', 'angela-yu') }}">
                             <main>
-                                <img src="@if(Storage::exists($instructor->instructor_image)){{ Storage::url($instructor->instructor_image) }}@else{{ asset('backend/assets/images/ibanews1.jpg') }}@endif">
+                                <img src='backend/assets/images/ibanews1.jpg'>
                                 <div class="col-md-12">
                                 <h6 class="instructor-title">Admissions 2020</h6>
                                         <p style="text-align: justify;">Our students are our number one priority and we want to assure them that minimizing disruption and loss in education for our current and prospective students is our focus at this time. We have 
@@ -59,12 +57,11 @@
                         </a>
                         </div>
                     </div>
-                @endforeach
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="instructor-box mx-auto text-center">
-                        <a href="{{ route('instructor.view', $instructor->instructor_slug) }}">
+                        <a href="{{ route('instructor.view', 'angela-yu') }}">
                             <main>
-                                <img src="@if(Storage::exists($instructor->instructor_image)){{ Storage::url($instructor->instructor_image) }}@else{{ asset('backend/assets/images/ibanews2.jpg') }}@endif">
+                                <img src='backend/assets/images/ibanews2.jpg'>
                                 <div class="col-md-12">
                                 <h6 class="instructor-title">IBA Financial Assistance</h6>
                                         <p style="text-align: justify;">The IBA offers financial assistance to deserving students in the form of various Financial Assistances mechanisms. IBA has a dedicated Financial Assistance Office and Financial Assistance Committee who administer all students financial need related affairs.

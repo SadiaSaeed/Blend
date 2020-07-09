@@ -18,6 +18,8 @@ use App\Models\Role;
 use DataTables;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use DB;
+use App\Models\Instructor;
 /**
  * Class contain functions for admin
  *
@@ -127,9 +129,21 @@ class UserController extends Controller
         $user->is_active = $request->input('is_active');
         $user->save();
 
+        $user_id = DB::table('users')->orderBy('updated_at', 'desc')->first();
+
         if($request->exists('roles')) {
             $roles = $request->input('roles');
             foreach ($roles as $role_name) {
+                if ($role_name == 'instructor')
+                {
+                    $instruct = new Instructor();
+                    $instruct->user_id = $user_id->id;
+                    $instruct->first_name = $request->input('first_name');
+                    $instruct->last_name = $request->input('last_name');
+                    $instruct->instructor_slug = $request->input('first_name');
+                    $instruct->contact_email = $request->input('email');
+                    $instruct->save();
+                }
                 $role = Role::where('name', $role_name)->first();
                 $user->roles()->attach($role);
             }

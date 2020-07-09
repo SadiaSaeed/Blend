@@ -3,13 +3,6 @@
 <link rel="stylesheet" href="{{ asset('frontend/vendor/rating/rateyo.css') }}">
 <!-- content start -->
 <div class="container-fluid p-0 home-content">
-    <!-- banner start -->
-    <div class="subpage-slide-blue">
-        <div class="container">
-            <h1>Course</h1>
-        </div>
-    </div>
-    <!-- banner end -->
     
     <!-- breadcrumb start -->
         <div class="breadcrumb-container">
@@ -33,7 +26,7 @@
                     <div class="instructor-clist m-0">
                         <div class="col-md-12 p-0 m-0">
                             <i class="fa fa-chalkboard-teacher"></i>&nbsp;
-                            <span>Created by <b>{{ $course->instructor->first_name.' '.$course->instructor->last_name }}</b></span>
+                            <span> <b>{{ $course->instructor->first_name.' '.$course->instructor->last_name }}</b></span>
                         </div>
                     </div>
                     <div class="row cv-header">
@@ -51,25 +44,21 @@
 
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6  col-6">
                             <div class="cv-category-detail cv-rating float-lg-left float-md-right float-sm-right">
-                                <span>{{ $course->ratings->count('rating') }} Reviews</span>
+                                
                                 <br>
-                                <star class="course-rating">
-                                    @for($r=1;$r<=5;$r++)
-                                        <span class="fa fa-star {{ $r <= $course->ratings->avg('rating') ? 'checked-vpage' : ''}}"></span>
-                                    @endfor
-                                </star>
+                                
                             </div>
                         </div>
 
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="cv-category-detail cv-price">
                             	@php $course_price = $course->price ? $course->price : '0.00'; @endphp
-                                <h4>{{  config('config.default_currency').$course_price }}</h4>
+                                
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 float-md-right col-sm-6 float-sm-right col-6">
                             <div class="cv-category-detail cv-enroll float-lg-right float-md-right float-sm-right">
-                                <a href="javascript::void(0);" class="btn btn-BLEND-cview mt-1" data-toggle="modal" data-target="#rateModal">RATE COURSE</a>
+ 
                             </div>
                         </div>
                     </div>
@@ -175,18 +164,11 @@
                         <h6>COURSE FEATURES</h6>
                     </header>
 
-                    <div class="cf-pricing">
-                        <span>PRICING:</span>
-                        <button class="cf-pricing-btn btn">{{ $course->price == '' || $course_price == 0.00 ? 'FREE' : 'PAID' }}</button>
-                    </div>
-
                     <ul class="list-unstyled cf-pricing-li">
                         <li><i class="far fa-user"></i>{{ $students_count }} Student(s)</li>
                         <li><i class="far fa-clock"></i>Duration: {{ $course->duration ? $course->duration : '-' }}</li>
                         <li><i class="fas fa-bullhorn"></i>Lectures: {{ $lectures_count }}</li>
                         <li><i class="far fa-play-circle"></i>Videos: {{ $videos_count }}</li>
-                        <li><i class="far fa-address-card"></i>Certificate of Completion</li>
-                        <li><i class="fas fa-file-download"></i>Downloadable Resources</li>
                         <li><i class="fas fa-file-download"></i><a href="{{ url('notes') }}">Student's Notes</a></li>
                     </ul>
                 </section>
@@ -211,15 +193,8 @@
                 </section>
                 @endif
                 
-                <h6 class="mt-4 underline-heading">COURSE CATEGORIES</h6>
-                <ul class="ul-no-padding">
-                	@php $categories = SiteHelpers::active_categories(); @endphp
-                    @foreach ($categories as $category)
-			            <li class="my-1">
-			                {{ $category->name}}
-			            </li>
-			        @endforeach
-                </ul>
+<br>
+<br>
 
                 @if($course->keywords)
                 <section class="tags-container mt-3">

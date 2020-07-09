@@ -45,9 +45,7 @@
             </div>    
 
             <div class="col-sm-5 col-md-3 col-lg-2 col-xl-2 d-none d-sm-block">
-                @if(Auth::check() && !Auth::user()->hasRole('instructor') && !Auth::user()->hasRole('admin'))
-                <span class="become-instructor" href="{{ route('login') }}" data-toggle="modal" data-target="#myModal">Become Instructor</span>
-                @endif
+               
             </div>
 
             <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2">
@@ -127,62 +125,7 @@
     </footer>
     <!-- footer end -->
 
-    <!-- The Modal start -->
-    <div class="modal" id="myModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header bi-header ">
-            <h5 class="col-12 modal-title text-center bi-header-seperator-head">Become an Instructor</h5>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-           
-        <div class="becomeInstructorForm">
-           <form id="becomeInstructorForm" class="form-horizontal" method="POST" action="{{ route('become.instructor') }}">
-            {{ csrf_field() }}
-                <div class="px-4 py-2">
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-6">
-                                <label>First Name</label>
-                                <input type="text" class="form-control form-control-sm" placeholder="First Name" name="first_name">
-                            </div>
-                            <div class="col-6">
-                                <label>Last Name</label>
-                                <input type="text" class="form-control form-control-sm" placeholder="Last Name" name="last_name">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Contact Email</label>
-                        <input type="text" class="form-control form-control-sm" placeholder="Contact Email" name="contact_email">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Telephone</label>
-                        <input type="text" class="form-control form-control-sm" placeholder="Telephone" name="telephone">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Paypal ID</label>
-                        <input type="text" class="form-control form-control-sm" placeholder="Paypal ID" name="paypal_id">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Biography</label>
-                        <textarea class="form-control form-control" placeholder="Biography" name="biography"></textarea>
-                    </div>
-
-                    <div class="form-group mt-4">
-                        <button type="submit" class="btn btn-lg btn-block login-page-button">Submit</button>
-                    </div>
-
-                </div>
-                </form>
-            </div>
-        </div>
-      </div>
-    </div>
-    <!-- The Modal end -->
+   
     </body>
     <script src="{{ asset('frontend/js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
