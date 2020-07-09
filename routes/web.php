@@ -108,6 +108,9 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('instructor-course-curriculum/{course_id}', 'CourseController@instructorCourseCurriculum')->name('instructor.course.curriculum.edit');
         Route::post('instructor-course-curriculum-save', 'CourseController@instructorCourseCurriculumSave')->name('instructor.course.curriculum.save');
 
+        Route::get('instructor-course-grading/{course_id}', 'CourseController@instructorCourseGrading')->name('instructor.course.grading.edit');
+        Route::post('instructor-course-grading-save', 'CourseController@instructorCourseGradingSave')->name('instructor.course.grading.save');
+
 
         Route::get('instructor-credits', 'InstructorController@credits')->name('instructor.credits');
 

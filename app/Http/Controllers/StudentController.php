@@ -53,12 +53,52 @@ class StudentController extends Controller
     {
         $user_id = \Auth::user()->id;
         $courses = DB::table('courses')
-                    ->select('courses.*', 'instructors.first_name', 'instructors.last_name')
+                    ->select('courses.*', 'instructors.first_name', 'instructors.last_name', 'course_taken.*')
                     ->join('instructors', 'instructors.id', '=', 'courses.instructor_id')
                     ->join('course_taken', 'course_taken.course_id', '=', 'courses.id')
                     ->where('course_taken.user_id',$user_id)->get();
+        $cgpa = 0.0;
+        $totalCredits = 0.0;
+        $totalScore = 0.0;
+        foreach ($courses as $course){
+            
+            if ($course->isCompleted) {
+                $cred = $course->Credits;
+                $totalCredits = $totalCredits + $cred;
+                $grad = $course->grade;
+                if ($grad == 'A'){
+                    $totalScore = $totalScore + ($cred*4.0);
+                }
+                else if ($grad == 'A-'){
+                    $totalScore = $totalScore + ($cred*3.67);
+                }
+                else if ($grad == 'B+'){
+                    $totalScore = $totalScore + ($cred*3.33);
+                }
+                else if ($grad == 'B'){
+                    $totalScore = $totalScore + ($cred*3.00);
+                }
+                else if ($grad == 'B-'){
+                    $totalScore = $totalScore + ($cred*2.67);
+                }
+                else if ($grad == 'C+'){
+                    $totalScore = $totalScore + ($cred*2.33);
+                }
+                else if ($grad == 'C'){
+                    $totalScore = $totalScore + ($cred*2.00);
+                }
+                else if ($grad == 'C-'){
+                    $totalScore = $totalScore + ($cred*1.69);
+                }
+            
+
+            }
+
+            
+        }
+        $cgpa = $totalScore / $totalCredits;
         
-        return view('students.index', compact('courses'));
+        return view('students.index', compact('courses', 'cgpa'));
     }
 
     public function getForm($user_id='', Request $request)

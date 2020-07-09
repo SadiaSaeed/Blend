@@ -46,7 +46,7 @@
             <div class="card-watermark darker font-size-60 m-15"><i class="far fa-play-circle" aria-hidden="true"></i></div>
             <div class="counter counter-md counter-inverse text-left">
               <div class="counter-number-group">
-                <span class="counter-number">3</span>
+                <span class="counter-number">{{ $cgpa }}</span>
                 <span class="counter-number-related text-capitalize">CGPA</span>
               </div>
               <div class="counter-label text-capitalize">overall</div>

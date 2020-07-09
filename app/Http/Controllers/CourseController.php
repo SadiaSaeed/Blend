@@ -412,6 +412,23 @@ class CourseController extends Controller
         return view('instructor.course.create_curriculum', $this->data);
     }
 
+    public function instructorCourseGrading($course_id = '',Request $request)
+    {   
+        
+        $categories = Category::where('is_active', 1)->get();
+        $instruction_levels = InstructionLevel::get();
+        if($course_id) {
+            $course = Course::find($course_id);
+        }else{
+            $course = $this->getColumnTable('courses');
+        }
+        $users = DB::table('users')
+                 ->select('users.id as users_id', 'users.name as user_name')
+                 ->join('course_taken', 'users.id', '=', 'course_taken.user_id')
+                 ->join('courses', 'courses.id', '=', 'course_taken.course_id');
+        return view('instructor.course.create_grading', compact('course', 'categories', 'instruction_levels', 'users'));
+    }
+
     public function instructorCourseImageSave(Request $request)
     {
         /**
@@ -460,6 +477,60 @@ class CourseController extends Controller
     }
 
     public function instructorCourseInfoSave(Request $request)
+    {
+        $course_id = $request->input('course_id');
+        // echo '<pre>';print_r($_POST);exit;
+        $validation_rules = [
+            'course_title' => 'required|string|max:50',
+            'category_id' => 'required',
+            'instruction_level_id' => 'required',
+        ];
+
+        $validator = Validator::make($request->all(),$validation_rules);
+
+        // Stop if validation fails
+        if ($validator->fails()) {
+            return $this->return_output('error', 'error', $validator, 'back', '422');
+        }
+
+        if ($course_id) {
+            $course = Course::find($course_id);
+            $success_message = 'Course updated successfully';
+        } else {
+            $course = new Course();
+            $success_message = 'Course added successfully';
+
+            //create slug only while add
+            $slug = $request->input('course_title');
+            $slug = str_slug($slug, '-');
+
+            $results = DB::select(DB::raw("SELECT count(*) as total from courses where course_slug REGEXP '^{$slug}(-[0-9]+)?$' "));
+
+            $finalSlug = ($results['0']->total > 0) ? "{$slug}-{$results['0']->total}" : $slug;
+            $course->course_slug = $finalSlug;
+        }
+
+        $course->course_title = $request->input('course_title');
+        $course->instructor_id = \Auth::user()->instructor->id;
+        $course->category_id = $request->input('category_id');
+        $course->instruction_level_id = $request->input('instruction_level_id');
+        $course->keywords = $request->input('keywords');
+        $course->Credits = $request->input('Credits');
+        $course->overview = $request->input('overview');
+
+        $course->duration = $request->input('duration');
+        $course->price = $request->input('price');
+        $course->strike_out_price = $request->input('strike_out_price');
+        
+        $course->is_active = $request->input('is_active');
+        $course->save();
+
+        $course_id = $course->id;
+
+        return $this->return_output('flash', 'success', $success_message, 'instructor-course-info/'.$course_id, '200');
+    }
+
+    public function instructorCourseGradingSave(Request $request)
     {
         $course_id = $request->input('course_id');
         // echo '<pre>';print_r($_POST);exit;

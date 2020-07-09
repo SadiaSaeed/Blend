@@ -11,4 +11,7 @@
     <li class="nav-item">
         <a class="nav-link py-1 {{ request()->is('instructor-course-curriculum*') ? 'active' : '' }} @if(!$course->id) {{ 'course-id-empty' }} @endif" href="@if($course->id) {{ route('instructor.course.curriculum.edit', $course->id) }} @else {{ 'javascript:void();' }} @endif">Curriculum</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link py-1 {{ request()->is('instructor-course-grading*') ? 'active' : '' }} @if(!$course->id) {{ 'course-id-empty' }} @endif" href="@if($course->id) {{ route('instructor.course.grading.edit', $course->id) }} @else {{ 'javascript:void();' }} @endif">Grading</a>
+    </li>
 </ul>
