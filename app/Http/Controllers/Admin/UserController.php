@@ -12,8 +12,10 @@
  */
 namespace App\Http\Controllers\Admin;
 
+use DB;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Instructor;
 use App\Models\Role;
 use DataTables;
 use Illuminate\Http\Request;
@@ -128,6 +130,7 @@ class UserController extends Controller
 
         $user->is_active = $request->input('is_active');
         $user->save();
+        $user_id = DB::table('users')->orderBy('updated_at', 'desc')->first();
 
         $user_id = DB::table('users')->orderBy('updated_at', 'desc')->first();
 

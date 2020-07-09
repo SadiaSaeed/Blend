@@ -53,12 +53,116 @@ class StudentController extends Controller
     {
         $user_id = \Auth::user()->id;
         $courses = DB::table('courses')
-                    ->select('courses.*', 'instructors.first_name', 'instructors.last_name')
+                    ->select('courses.*', 'instructors.first_name', 'instructors.last_name', 'course_taken.*')
                     ->join('instructors', 'instructors.id', '=', 'courses.instructor_id')
                     ->join('course_taken', 'course_taken.course_id', '=', 'courses.id')
                     ->where('course_taken.user_id',$user_id)->get();
+
+        $count_enrolled = DB::table('course_taken')
+                           ->select(DB::raw('count(*) as count_enrolled'))
+                           ->where('course_taken.user_id', $user_id)
+                           ->where('course_taken.isCompleted', 0)
+                           ->groupBy('course_taken.user_id')->get();
+
+
+        $gpa = 0.0;
+        $TC = 0.0;
+        $TS = 0.0;
+
+        foreach ($courses as $course){
+            if ($course->isCompleted && $course->Term == 'Spring 2020') {
+                $cred = $course->Credits;
+                $TC = $TC + $cred;
+                $grad = $course->grade;
+                if ($grad == 'A'){
+                    $TS = $TS + ($cred*4.0);
+                }
+                else if ($grad == 'A-'){
+                    $TS = $TS + ($cred*3.67);
+                }
+                else if ($grad == 'B+'){
+                    $TS = $TS + ($cred*3.33);
+                }
+                else if ($grad == 'B'){
+                    $TS = $TS + ($cred*3.00);
+                }
+                else if ($grad == 'B-'){
+                    $TS = $TS + ($cred*2.67);
+                }
+                else if ($grad == 'C+'){
+                    $TS = $TS + ($cred*2.33);
+                }
+                else if ($grad == 'C'){
+                    $TS = $TS + ($cred*2.00);
+                }
+                else if ($grad == 'C-'){
+                    $TS = $TS + ($cred*1.69);
+                }
+            
+
+            }
+        }
+
+        $gpa = $TS / $TC;
+
+        $cgpa = 0.0;
+        $totalCredits = 0.0;
+        $totalScore = 0.0;
+        foreach ($courses as $course){
+            
+            if ($course->isCompleted) {
+                $cred = $course->Credits;
+                $totalCredits = $totalCredits + $cred;
+                $grad = $course->grade;
+                if ($grad == 'A'){
+                    $totalScore = $totalScore + ($cred*4.0);
+                }
+                else if ($grad == 'A-'){
+                    $totalScore = $totalScore + ($cred*3.67);
+                }
+                else if ($grad == 'B+'){
+                    $totalScore = $totalScore + ($cred*3.33);
+                }
+                else if ($grad == 'B'){
+                    $totalScore = $totalScore + ($cred*3.00);
+                }
+                else if ($grad == 'B-'){
+                    $totalScore = $totalScore + ($cred*2.67);
+                }
+                else if ($grad == 'C+'){
+                    $totalScore = $totalScore + ($cred*2.33);
+                }
+                else if ($grad == 'C'){
+                    $totalScore = $totalScore + ($cred*2.00);
+                }
+                else if ($grad == 'C-'){
+                    $totalScore = $totalScore + ($cred*1.69);
+                }
+            
+
+            }
+
+            
+        }
+        $cgpa = $totalScore / $totalCredits;
         
-        return view('students.index', compact('courses'));
+        return view('students.index', compact('courses', 'cgpa', 'count_enrolled', 'gpa'));
+    }
+
+    public function pastCourses(Request $request)
+    {
+        $user_id = \Auth::user()->id;
+
+        $courses = DB::table('courses')
+                    ->select('courses.*', 'instructors.first_name', 'instructors.last_name', 'course_taken.*')
+                    ->join('instructors', 'instructors.id', '=', 'courses.instructor_id')
+                    ->join('course_taken', 'course_taken.course_id', '=', 'courses.id')
+                    ->where('course_taken.user_id',$user_id)
+                    ->where('course_taken.isCompleted', 1)->get();
+
+
+
+        return view('students.pastCourses', compact('courses'));
     }
 
     public function getForm($user_id='', Request $request)
