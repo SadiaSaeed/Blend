@@ -36,8 +36,8 @@ return array(
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
-    'App\\Library\\VideoHelpers' => $baseDir . '/app/Library/VideoHelpers.php',
     'App\\Library\\BLENDHelpers' => $baseDir . '/app/Library/BLENDHelpers.php',
+    'App\\Library\\VideoHelpers' => $baseDir . '/app/Library/VideoHelpers.php',
     'App\\Mail\\ContactAdmin' => $baseDir . '/app/Mail/ContactAdmin.php',
     'App\\Mail\\ContactInstructor' => $baseDir . '/app/Mail/ContactInstructor.php',
     'App\\Models\\Blog' => $baseDir . '/app/Models/Blog.php',
@@ -4991,4 +4991,8 @@ return array(
     'phpDocumentor\\Reflection\\Types\\This' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/This.php',
     'phpDocumentor\\Reflection\\Types\\True_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/True_.php',
     'phpDocumentor\\Reflection\\Types\\Void_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Void_.php',
+    'willvincent\\Rateable\\MigrationCommand' => $vendorDir . '/willvincent/laravel-rateable/src/commands/MigrationCommand.php',
+    'willvincent\\Rateable\\Rateable' => $vendorDir . '/willvincent/laravel-rateable/src/Rateable/Rateable.php',
+    'willvincent\\Rateable\\RateableServiceProvider' => $vendorDir . '/willvincent/laravel-rateable/src/Rateable/RateableServiceProvider.php',
+    'willvincent\\Rateable\\Rating' => $vendorDir . '/willvincent/laravel-rateable/src/Rateable/Rating.php',
 );

@@ -3,9 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use willvincent\Rateable\Rateable;
 
 class Note extends Model
 {
+    use Rateable;
     /**
      * Fields that can not be mass assigned
      * 

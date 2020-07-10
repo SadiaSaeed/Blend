@@ -29,10 +29,14 @@ class ComposerStaticInitf7e3eeb0362618f5035ab6c201d00357
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
-        '5765f4176d6e3aea429ea45c1e98ac78' => __DIR__ . '/../..' . '/app/Http/SiteHelpers.php',
+        '48bed9cf8b6b02998ebdf3b7964ec5d2' => __DIR__ . '/../..' . '/app/Http/SiteHelpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'w' => 
+        array (
+            'willvincent\\Rateable\\' => 21,
+        ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
@@ -181,6 +185,10 @@ class ComposerStaticInitf7e3eeb0362618f5035ab6c201d00357
     );
 
     public static $prefixDirsPsr4 = array (
+        'willvincent\\Rateable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/Rateable',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
@@ -569,8 +577,8 @@ class ComposerStaticInitf7e3eeb0362618f5035ab6c201d00357
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Library\\VideoHelpers' => __DIR__ . '/../..' . '/app/Library/VideoHelpers.php',
         'App\\Library\\BLENDHelpers' => __DIR__ . '/../..' . '/app/Library/BLENDHelpers.php',
+        'App\\Library\\VideoHelpers' => __DIR__ . '/../..' . '/app/Library/VideoHelpers.php',
         'App\\Mail\\ContactAdmin' => __DIR__ . '/../..' . '/app/Mail/ContactAdmin.php',
         'App\\Mail\\ContactInstructor' => __DIR__ . '/../..' . '/app/Mail/ContactInstructor.php',
         'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',
@@ -5524,6 +5532,10 @@ class ComposerStaticInitf7e3eeb0362618f5035ab6c201d00357
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\True_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/True_.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
+        'willvincent\\Rateable\\MigrationCommand' => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/commands/MigrationCommand.php',
+        'willvincent\\Rateable\\Rateable' => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/Rateable/Rateable.php',
+        'willvincent\\Rateable\\RateableServiceProvider' => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/Rateable/RateableServiceProvider.php',
+        'willvincent\\Rateable\\Rating' => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/Rateable/Rating.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -20,8 +20,6 @@ use App\Models\Role;
 use DataTables;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use DB;
-use App\Models\Instructor;
 /**
  * Class contain functions for admin
  *

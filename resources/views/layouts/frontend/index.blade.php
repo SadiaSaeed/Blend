@@ -16,6 +16,7 @@
 
         <link rel="stylesheet" href="{{ asset('backend/fonts/web-icons/web-icons.min599c.css?v4.0.2') }}">
         <link rel="stylesheet" href="{{ asset('backend/vendor/toastr/toastr.min599c.css?v4.0.2') }}">
+
         
     </head>
     <body style="overflow-x: hidden;">

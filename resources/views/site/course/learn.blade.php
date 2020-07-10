@@ -169,7 +169,7 @@
                         <li><i class="far fa-clock"></i>Duration: {{ $course->duration ? $course->duration : '-' }}</li>
                         <li><i class="fas fa-bullhorn"></i>Lectures: {{ $lectures_count }}</li>
                         <li><i class="far fa-play-circle"></i>Videos: {{ $videos_count }}</li>
-                        <li><i class="fas fa-file-download"></i><a href="{{ url('notes') }}">Student's Notes</a></li>
+                        <li><i class="fas fa-file-download"></i><a href="{{ route('notes.index', $course->course_slug) }}">Student's Notes</a></li>
                     </ul>
                 </section>
                 

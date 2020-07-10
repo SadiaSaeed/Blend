@@ -1,31 +1,6 @@
 @extends('layouts.frontend.noteindex')
 @section('content')
-<div class="container">
-. . .
-. 
-..
-.
-. 
-. 
-. ... . 
-. . .. ... . 
- .. . . . .. 
-</div>
-<div class="container">
-. . .
-. 
-..
-.
-. 
-. 
-. ... . 
-. . .. ... . 
- .. . . . .. 
-</div>
-<div class="container">
-^
 
-</div>
 
     <div class="container">
         <div class="row">
@@ -56,6 +31,13 @@
                                 @endif
                             </div>
                         </form>
+
+                        <div class="rating">
+                                            <input id="input-1" name="rate" class="rating rating-loading" data-min="0" data-max="5" data-step="1" value="{{ $post->userAverageRating }}" data-size="xs">
+                                            <input type="hidden" name="id" required="" value="{{ $post->id }}">
+                                            <br/>
+                                            <button class="btn btn-success">Submit Review</button>
+                        </div>
                     </div>
                 </div>
             </div>
