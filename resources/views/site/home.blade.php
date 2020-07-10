@@ -37,7 +37,7 @@
                                 <img src='backend/assets/images/course_detail_thumb.jpg'>
                                 <div class="col-md-12">
                                 <h6 class="instructor-title">Revised Admission Policy</h6>
-                                        <p style="text-align: justify;">In the wake of COVID-19 constraints, the IBA Karachi has decided to overhaul the admission process for its undergraduate programs. The aptitude test scheduled for July 5, 2020 for BBA, BS Accounting & Finance, BS Economics and BS Social Sciences & Liberal Arts programs has been substituted with an Alternative Assessment Criteria.</p>
+                                        <p style="text-align: justify;">In the wake of COVID-19 constraints, the IBA Karachi has decided to overhaul the admission process for its undergraduate programs.</p>
                                 </div>
                             </main>
                         </a>
@@ -50,8 +50,7 @@
                                 <img src='backend/assets/images/ibanews1.jpg'>
                                 <div class="col-md-12">
                                 <h6 class="instructor-title">Admissions 2020</h6>
-                                        <p style="text-align: justify;">Our students are our number one priority and we want to assure them that minimizing disruption and loss in education for our current and prospective students is our focus at this time. We have 
-                                            therefore made changes in our policies to cater to the developments for our prospective students. Click here to further discover about policy changes.</p>
+                                        <p style="text-align: justify;"> We have made changes in our policies to cater to the developments for our prospective students. Click here to further discover about policy changes.</p>
                                 </div>
                             </main>
                         </a>
@@ -64,8 +63,7 @@
                                 <img src='backend/assets/images/ibanews2.jpg'>
                                 <div class="col-md-12">
                                 <h6 class="instructor-title">IBA Financial Assistance</h6>
-                                        <p style="text-align: justify;">The IBA offers financial assistance to deserving students in the form of various Financial Assistances mechanisms. IBA has a dedicated Financial Assistance Office and Financial Assistance Committee who administer all students financial need related affairs.
-                                            Read further about our financial aid process.</p>
+                                        <p style="text-align: justify;">The IBA offers financial assistance to deserving students in the form of various Financial Assistances mechanisms. </p>
                                 </div>
                             </main>
                         </a>

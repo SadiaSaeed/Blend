@@ -18,6 +18,27 @@
         <link rel="stylesheet" href="{{ asset('backend/vendor/toastr/toastr.min599c.css?v4.0.2') }}">
         
     </head>
+    <style>
+        .cn-button{
+      padding: 5px 10px;
+      border-radius: 14px;
+      color: white;
+      background-color: #14bef0;
+      text-transform: capitalize;
+      text-decoration: none;
+      margin-top: 3%;
+  }
+
+ 
+
+  .cn-button:hover{
+    text-decoration: none;
+      border: 2px #14bef0 solid;
+      background-color: transparent;
+      color: #14bef0;
+      
+  }
+  </style>
     <body style="overflow-x: hidden;">
     <div class="se-pre-con"></div>
     <!-- Header -->
@@ -30,7 +51,7 @@
             </div>
             <div class="col-md-3 col-lg-6 col-xl-6 d-none d-md-block">
                 <div class="dropdown float-left" >
-                <a href="{{ url('notes/create') }}">Create Note</a>
+                <a href="{{ url('notes/create') }}" class="cn-button">Create Note</a>
                     <?php 
                         $categories = SiteHelpers::active_categories();
                     ?>
@@ -47,7 +68,6 @@
 
             <div class="col-sm-5 col-md-3 col-lg-2 col-xl-2 d-none d-sm-block">
                 @if(Auth::check() && !Auth::user()->hasRole('instructor') && !Auth::user()->hasRole('admin'))
-                <span class="become-instructor" href="{{ route('login') }}" data-toggle="modal" data-target="#myModal">Become Instructor</span>
                 @endif
             </div>
 

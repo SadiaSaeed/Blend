@@ -12,7 +12,7 @@
  */
 namespace App\Http\Controllers\Admin;
 
-use DB;
+
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Instructor;
@@ -21,7 +21,6 @@ use DataTables;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use DB;
-use App\Models\Instructor;
 /**
  * Class contain functions for admin
  *
