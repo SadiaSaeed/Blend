@@ -46,8 +46,13 @@
                         @else
                         <ul class="list-group">
                             @foreach($notes as $note)
+<<<<<<< HEAD
+                                <li class="list-group-item">
+                                    <a href="{{ route('notes.edit', [$course->course_slug, $note->slug]) }}">
+=======
                                 <li class="list-group-item notes-select">
                                     <a href="{{ url('notes/edit', [$note->slug]) }}" class="notes-title">
+>>>>>>> e8921f21900de0024b54ad5bf006636a0b89c354
                                         {{ $note->title }}
                                     </a>
                                     <span class="pull-right">{{ $note->updated_at->diffForHumans() }}</span>

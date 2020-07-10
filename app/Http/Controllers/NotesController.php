@@ -147,9 +147,11 @@ public function store($course_slug = '', Request $request)
  * @param  \App\Note  $note
  * @return \Illuminate\Http\Response
  */
-public function edit(Note $note)
+public function edit($course_slug = '', Request $request, Note $note)
 {
-  return view('notes.edit', compact('note'));
+  $course_breadcrumb = Session::get('course_breadcrumb');
+  $course = Course::where('course_slug', $course_slug)->first();
+  return view('notes.edit', compact('course', 'note'));
 }
 
 /**
@@ -159,13 +161,27 @@ public function edit(Note $note)
  * @param  \App\Note  $note
  * @return \Illuminate\Http\Response
  */
-public function update(Request $request, Note $note)
+public function update($course_slug = '', Request $request, Note $note)
 {
+
+  switch($request->input('action')){
+    case 'save':
+      $note->title = $request->title;
+      $note->body = $request->body;
+
+      $note->save();
+    break;
+
+    case 'delete':
+      Note::where('id', $note->id)->delete();
+    break;
+  }
+
   $note->title = $request->title;
   $note->body = $request->body;
 
   $note->save();
 
-  return 'Saved!';
+  return redirect()->route('notes.index', $course_slug);
 }
 }
