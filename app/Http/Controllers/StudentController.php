@@ -103,8 +103,9 @@ class StudentController extends Controller
             }
         }
 
-        if ($TC > 0)
-            $gpa = $TS / $TC;
+        if($TC != 0){
+            $gpa = $TS/$TC;
+        }
 
         $cgpa = 0.0;
         $totalCredits = 0.0;
@@ -145,8 +146,9 @@ class StudentController extends Controller
 
             
         }
-        if ($totalCredits > 0)
-            $cgpa = $totalScore / $totalCredits;
+        if($totalCredits != 0){
+            $cgpa = $totalScore/$totalCredits;
+        }
         
         return view('students.index', compact('courses', 'cgpa', 'count_enrolled', 'gpa'));
     }

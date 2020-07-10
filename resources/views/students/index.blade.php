@@ -47,8 +47,8 @@
             <div class="card-watermark darker font-size-80 m-15"><i class="fa fa-chalkboard" aria-hidden="true"></i></div>
             <div class="counter counter-md counter-inverse text-left">
               <div class="counter-number-group">
-                <span class="counter-number">{{ $count_enrolled->count() > 0 ? $count_enrolled[0]->count_enrolled : 0 }}</span>
-                <span class="counter-number-related text-capitalize">Courses Enrolled</span>
+              <span class="counter-number">{{ $count_enrolled->count() > 0 ? $count_enrolled[0]->count_enrolled : 0 }}</span>
+              <span class="counter-number-related text-capitalize">Courses Enrolled</span>
               </div>
               <div class="counter-label text-capitalize">This Semester</div>
             </div>
@@ -62,7 +62,7 @@
             <div class="card-watermark darker font-size-80 m-15"><i class="fa fa-chalkboard" aria-hidden="true"></i></div>
             <div class="counter counter-md counter-inverse text-left">
               <div class="counter-number-group">
-                <span class="counter-number">{{round($gpa,2)}}</span>
+                <span class="counter-number">2</span>
                 <span class="counter-number-related text-capitalize">GPA</span>
               </div>
               <div class="counter-label text-capitalize">This Semester</div>
@@ -77,7 +77,7 @@
             <div class="card-watermark darker font-size-60 m-15"><i class="fa fa-chalkboard" aria-hidden="true"></i></div>
             <div class="counter counter-md counter-inverse text-left">
               <div class="counter-number-group">
-                <span class="counter-number">{{ round($cgpa,2) }}</span>
+                <span class="counter-number">3</span>
                 <span class="counter-number-related text-capitalize">CGPA</span>
               </div>
               <div class="counter-label text-capitalize">overall</div>
@@ -91,7 +91,7 @@
                 <h1 class="all-headings">My Courses</h1>
                 <br>
                 @foreach($courses as $course)
-                  @if($course->isCompleted == 0)
+                  @if (!$course -> isCompleted)
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="course-block mx-auto course-container" id="container-bg">
                         <a href="{{ route('course.learn', $course->course_slug) }}" class="c-view">
@@ -108,7 +108,7 @@
                         </a>    
                         </div>
                     </div>
-                  @endif 
+                  @endif
                 @endforeach
             </div>
     </div>

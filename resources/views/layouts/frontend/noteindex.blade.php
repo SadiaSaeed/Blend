@@ -23,6 +23,27 @@
 
         
     </head>
+    <style>
+        .cn-button{
+      padding: 5px 10px;
+      border-radius: 14px;
+      color: white;
+      background-color: #14bef0;
+      text-transform: capitalize;
+      text-decoration: none;
+      margin-top: 3%;
+  }
+
+ 
+
+  .cn-button:hover{
+    text-decoration: none;
+      border: 2px #14bef0 solid;
+      background-color: transparent;
+      color: #14bef0;
+      
+  }
+  </style>
     <body style="overflow-x: hidden;">
     <div class="se-pre-con"></div>
     <!-- Header -->
@@ -52,7 +73,6 @@
 
             <div class="col-sm-5 col-md-3 col-lg-2 col-xl-2 d-none d-sm-block">
                 @if(Auth::check() && !Auth::user()->hasRole('instructor') && !Auth::user()->hasRole('admin'))
-                <span class="become-instructor" href="{{ route('login') }}" data-toggle="modal" data-target="#myModal">Become Instructor</span>
                 @endif
             </div>
 

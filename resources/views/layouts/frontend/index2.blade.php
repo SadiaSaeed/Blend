@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="{{ asset('backend/css/bootstrap-extend.min599c.css?v4.0.2') }}">
   <link rel="stylesheet" href="{{ asset('backend/assets/css/site.min599c.css?v4.0.2') }}">
 
-
   
 
   <!-- Plugins -->
@@ -106,6 +105,7 @@
     <script src="{{ asset('frontend/js/fancybox.min.js') }}"></script>
     <script src="{{ asset('frontend/js/modernizr.js') }}"></script>
     <script src="{{ asset('frontend/js/jquery.validate.js') }}"></script>
+    
 
  <!-- Toastr -->
         <script src="{{ asset('backend/vendor/toastr/toastr.min599c.js?v4.0.2') }}"></script>
