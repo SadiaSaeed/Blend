@@ -30,9 +30,6 @@
             </a>
             <ul class="site-menu-sub">
                 <li class="site-menu-item {{ request()->is('admin/config/page-home') ? 'active' : '' }}">
-                  <a href="{{ route('admin.pageHome') }}">
-                    <span class="site-menu-title">Home</span>
-                  </a>
                 </li>
                 <li class="site-menu-item {{ request()->is('admin/config/page-about') ? 'active' : '' }}">
                   <a href="{{ route('admin.pageAbout') }}">
@@ -57,11 +54,6 @@
                 <li class="site-menu-item {{ request()->is('admin/config/setting-general') ? 'active' : '' }}">
                   <a href="{{ route('admin.settingGeneral') }}">
                     <span class="site-menu-title">General</span>
-                  </a>
-                </li>
-                <li class="site-menu-item {{ request()->is('admin/config/setting-payment') ? 'active' : '' }}">
-                  <a href="{{ route('admin.settingPayment') }}">
-                    <span class="site-menu-title">Payment</span>
                   </a>
                 </li>
                 <!-- <li class="site-menu-item {{ request()->is('admin/config/setting-email') ? 'active' : '' }}">

@@ -125,18 +125,6 @@
                 placeholder="Admin Email" value="{{ isset($config['admin_email']) ? $config['admin_email'] : '' }}" />
             </div>
 
-            <div class="form-group col-md-4">
-              <label class="form-control-label">Admin Commision</label>
-              <input type="text" class="form-control" name="admin_commission" 
-                placeholder="Admin Commision" value="{{ isset($config['admin_commission']) ? $config['admin_commission'] : '' }}" />
-            </div>
-        
-            <div class="form-group col-md-4">
-              <label class="form-control-label">Minimum Withdraw</label>
-              <input type="text" class="form-control" name="minimum_withdraw" 
-                placeholder="Minimum Withdraw" value="{{ isset($config['minimum_withdraw']) ? $config['minimum_withdraw'] : '' }}" />
-            </div>
-
         </div>
 
       <hr>

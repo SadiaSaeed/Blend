@@ -2,13 +2,16 @@
 @section('content')
 <style>
     .notes-heading{
-        margin-top: 22px;
+        
         margin-bottom: 11px;
-        font-size: 32px;
+        font-size: 18px;
         font-weight: bold;
         font-family: helvetica;
         text-decoration: underline;
         text-transform: capitalize;
+        color: white;
+        padding: 10px 15px;
+        background-color: #00b4d8;
     }
 
     .notes-select:hover{
@@ -23,37 +26,16 @@
         float: right;
     }
     </style>
-<div class="container">
-. . .
-. 
-..
-.
-. 
-. 
-. ... . 
-. . .. ... . 
- .. . . . .. 
-</div>
-<div class="container">
-. . .
-. 
-..
-.
-. 
-. 
-. ... . 
-. . .. ... . 
- .. . . . .. 
-</div>
-<div class="container">
-^
-</div>
+   <br>
+   <br> 
 
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">My notes---->       <a href="{{ route('notes.others', $course->course_slug) }}">Student's Notes</a></div>
+                    <div class="panel-heading">
+                    <a href="{{ route('notes.index', $course->course_slug) }}" class="notes-heading">My notes</a>
+                    <a href="{{ route('notes.others', $course->course_slug) }}">Student's Notes</a></div>
                     <div class="panel-body">
 
                         @if($notes->isEmpty())
