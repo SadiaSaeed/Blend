@@ -14,7 +14,7 @@ use OutOfBoundsException;
  */
 final class Versions
 {
-    const ROOT_PACKAGE_NAME = 'BLENDpro/BLEND';
+    const ROOT_PACKAGE_NAME = 'blendpro/blend';
     /**
      * Array of all available composer packages.
      * Dont read this array from your calling code, but use the \PackageVersions\Versions::getVersion() method instead.
@@ -92,6 +92,7 @@ final class Versions
   'symfony/var-dumper' => 'v4.4.10@56b3aa5eab0ac6720dcd559fd1d590ce301594ac',
   'tijsverkoyen/css-to-inline-styles' => '2.2.2@dda2ee426acd6d801d5b7fd1001cde9b5f790e15',
   'vlucas/phpdotenv' => 'v3.6.6@4669484ccbc38fe7c4e0c50456778f2010566aad',
+  'willvincent/laravel-rateable' => '1.0.9@3ee044baadc424aab13db250d3233af34761dc7b',
   'beyondcode/laravel-dump-server' => '1.3.0@fcc88fa66895f8c1ff83f6145a5eff5fa2a0739a',
   'composer/package-versions-deprecated' => '1.8.1@b9805885293f3957ee0dd42616ac6915c4ac9a4b',
   'composer/xdebug-handler' => '1.4.2@fa2aaf99e2087f013a14f7432c1cd2dd7d8f1f51',
@@ -141,7 +142,7 @@ final class Versions
   'sebastian/version' => '2.0.1@99732be0ddb3361e16ad77b68ba41efc8e979019',
   'theseer/tokenizer' => '1.1.3@11336f6f84e16a720dae9d8e6ed5019efa85a0f9',
   'webmozart/assert' => '1.8.0@ab2cb0b3b559010b75981b1bdce728da3ee90ad6',
-  'BLENDpro/BLEND' => 'dev-master@1bcd3dfb1b822bcf9bbd8f62705cd31f47f5e774',
+  'blendpro/blend' => 'dev-master@cb5a0af68dcd4911d580be786522ac5ae19ef836',
 );
 
     private function __construct()

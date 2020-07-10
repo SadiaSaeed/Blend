@@ -41,8 +41,9 @@
             <tbody>
               @foreach($courses as $course)
               <tr>
+                
                 <td>{{ $course->id }}</td>
-                <td>{{ $course->course_title }}</td>
+                <td><a href="{{ route('course.learn', $course->course_slug) }}">{{ $course->course_title }}</a></td>
                 <td>{{ $course->Credits }}</td>
                 <td>{{ $course->grade }}</td>
                 <td>

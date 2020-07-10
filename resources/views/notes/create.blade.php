@@ -1,30 +1,6 @@
 @extends('layouts.frontend.noteindex')
 @section('content')
-<div class="container">
-. . .
-. 
-..
-.
-. 
-. 
-. ... . 
-. . .. ... . 
- .. . . . .. 
-</div>
-<div class="container">
-. . .
-. 
-..
-.
-. 
-. 
-. ... . 
-. . .. ... . 
- .. . . . .. 
-</div>
-<div class="container"> 
-^
-</div>
+
 
     <div class="container">
         <div class="row">
@@ -32,7 +8,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Create new note</div>
                     <div class="panel-body">
-                        <form action="{{ url('notes/create') }}" method="POST" class="form" role="form">
+                        <form action="{{ route('notes.create', $course->course_slug) }}" method="POST" class="form" role="form">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">

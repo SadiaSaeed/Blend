@@ -13,12 +13,6 @@
 Route::get('/', 'HomeController@index')->name('home');
 Auth::routes();
 
-Route::get('notes', 'NotesController@index');
-Route::get('notes/create', 'NotesController@create');
-Route::post('notes/create', 'NotesController@store');
-Route::get('notes/edit/{note}', 'NotesController@edit');
-Route::patch('notes/edit/{note}', 'NotesController@update');
-
 Route::get('logout', 'Auth\LoginController@logout')->name('logOut');
 
 Route::get('/login/{social}','Auth\LoginController@socialLogin')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
@@ -76,6 +70,15 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('my-courses', 'CourseController@myCourses')->name('my.courses');
         Route::get('course-learn/{course_slug}', 'CourseController@courseLearn')->name('course.learn');
+
+        Route::get('course-learn/{course_slug}/notes', 'NotesController@index')->name('notes.index');
+        Route::get('course-learn/{course_slug}/notes/create', 'NotesController@create')->name('notes.create');
+        Route::post('course-learn/{course_slug}/notes/create', 'NotesController@store')->name('notes.create');
+        Route::get('course-learn/{course_slug}/notes/others', 'NotesController@otherNotes')->name('notes.others');
+        Route::get('notes/edit/{note}', 'NotesController@edit');
+        Route::patch('notes/edit/{note}', 'NotesController@update');
+        Route::get('course-learn/{course_slug}/notes/view/{note}', 'NotesController@viewNote')->name('notes.view');
+        Route::post('course-learn/{course_slug}/notes/view/{note}', 'NotesController@storeRating')->name('notes.rating');
 
         Route::post('course-rate', 'CourseController@courseRate')->name('course.rate');
         Route::get('delete-rating/{raing_id}', 'CourseController@deleteRating')->name('delete.rating');

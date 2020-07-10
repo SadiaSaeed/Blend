@@ -105,6 +105,7 @@
     <script src="{{ asset('frontend/js/fancybox.min.js') }}"></script>
     <script src="{{ asset('frontend/js/modernizr.js') }}"></script>
     <script src="{{ asset('frontend/js/jquery.validate.js') }}"></script>
+    
 
  <!-- Toastr -->
         <script src="{{ asset('backend/vendor/toastr/toastr.min599c.js?v4.0.2') }}"></script>
