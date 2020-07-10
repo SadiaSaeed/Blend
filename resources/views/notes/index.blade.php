@@ -15,7 +15,7 @@
                         <ul class="list-group">
                             @foreach($notes as $note)
                                 <li class="list-group-item">
-                                    <a href="{{ url('notes/edit', [$note->slug]) }}">
+                                    <a href="{{ route('notes.edit', [$course->course_slug, $note->slug]) }}">
                                         {{ $note->title }}
                                     </a>
                                     <span class="pull-right">{{ $note->updated_at->diffForHumans() }}</span>

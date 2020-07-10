@@ -75,8 +75,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('course-learn/{course_slug}/notes/create', 'NotesController@create')->name('notes.create');
         Route::post('course-learn/{course_slug}/notes/create', 'NotesController@store')->name('notes.create');
         Route::get('course-learn/{course_slug}/notes/others', 'NotesController@otherNotes')->name('notes.others');
-        Route::get('notes/edit/{note}', 'NotesController@edit');
-        Route::patch('notes/edit/{note}', 'NotesController@update');
+        Route::get('course-learn/{course_slug}/notes/edit/{note}', 'NotesController@edit')->name('notes.edit');
+        Route::post('course-learn/{course_slug}/notes/edit/{note}', 'NotesController@update')->name('notes.edit');
         Route::get('course-learn/{course_slug}/notes/view/{note}', 'NotesController@viewNote')->name('notes.view');
         Route::post('course-learn/{course_slug}/notes/view/{note}', 'NotesController@storeRating')->name('notes.rating');
 
