@@ -121,15 +121,6 @@ figure figcaption {
                 @endif
         </div>
 
-        <div class="form-group col-md-4">
-            <label class="form-control-label">Paypal ID <span class="required">*</span></label>
-            <input type="text" class="form-control" name="paypal_id" 
-                placeholder="Paypal ID" value="{{ $instructor->paypal_id }}" />
-                @if ($errors->has('paypal_id'))
-                    <label class="error" for="paypal_id">{{ $errors->first('paypal_id') }}</label>
-                @endif
-        </div>
-
         <div class="form-group col-md-6">
             <label class="form-control-label">Facebook Link </label>
             <input type="text" class="form-control" name="link_facebook" 

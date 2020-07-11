@@ -74,27 +74,17 @@
 
         <div class="form-group col-md-4">
             <label class="form-control-label">Keywords</label>
-            <input type="text" class="form-control tagsinput" name="keywords" 
+            <input type="text" class="form-control" name="keywords" 
                 placeholder="Keywords" value="{{ $course->keywords }}" />
         </div>
 
         <div class="form-group col-md-4">
             <label class="form-control-label">Credits</label>
-            <input type="text" class="form-control tagsinput" name="Credits" 
+            <input type="text" class="form-control" name="Credits" 
                 placeholder="Credits" value="{{ $course->Credits }}" />
         </div>
 
-        <div class="form-group col-md-4">
-            <label class="form-control-label">Price <i class="fa fa-info-circle" data-toggle="tooltip" data-original-title="Leave blank if the course is free"></i></label>
-            <input type="number" class="form-control" name="price" 
-                placeholder="Course Price" value="{{ $course->price }}" />
-        </div>
-
-        <div class="form-group col-md-4">
-            <label class="form-control-label">Strike Out Price <i class="fa fa-info-circle" data-toggle="tooltip" data-original-title="Applied only for paid courses"></i></label>
-            <input type="text" class="form-control" name="strike_out_price" 
-                placeholder="Strike Out Price" value="{{ $course->strike_out_price }}" />
-        </div>
+        
 
         <div class="form-group col-md-4">
             <label class="form-control-label">Status</label>

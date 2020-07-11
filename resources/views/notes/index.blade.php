@@ -11,7 +11,22 @@
         text-transform: capitalize;
         color: white;
         padding: 10px 15px;
-        background-color: #00b4d8;
+        background-color: #28328c;
+    }
+    .heading-not-selected{
+        margin-bottom: 11px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: helvetica;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: #454545;
+        padding: 10px 15px;
+        
+    }
+
+    .heading-no-selected:hover{
+        text-decoration: underline;
     }
 
     .notes-select:hover{
@@ -25,34 +40,48 @@
     .notes-update{
         float: right;
     }
-    </style>
-   <br>
-   <br> 
+    
+    .cn-button{
+        margin-left: 20%;
+        padding: 5px 10px;
+        border-radius: 14px;
+        color: white;
+        background-color: #14bef0;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
 
+    .cn-button:hover{
+        border: 2px #14bef0 solid;
+        background-color: transparent;
+        color: #14bef0;
+    }
+    </style>
+   
+   <br>
+   <a href="{{ route('notes.create', $course->course_slug) }}" class="cn-button">Create Notes</a>
+   <br>
+    <br>
+    <br>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                     <a href="{{ route('notes.index', $course->course_slug) }}" class="notes-heading">My notes</a>
-                    <a href="{{ route('notes.others', $course->course_slug) }}">Student's Notes</a></div>
+                    <a href="{{ route('notes.others', $course->course_slug) }}" class="heading-not-selected">Class Notes</a></div>
                     <div class="panel-body">
-
+                        <br>
                         @if($notes->isEmpty())
-                            <img src="no-notes.png">
-                            <p>
+                           
+                            <p style="align: center;">
                                 You have not created any notes! <a href="{{ route('notes.create', $course->course_slug) }}">Create one</a> now.
                             </p>
                         @else
                         <ul class="list-group">
                             @foreach($notes as $note)
-<<<<<<< HEAD
                                 <li class="list-group-item">
                                     <a href="{{ route('notes.edit', [$course->course_slug, $note->slug]) }}">
-=======
-                                <li class="list-group-item notes-select">
-                                    <a href="{{ url('notes/edit', [$note->slug]) }}" class="notes-title">
->>>>>>> e8921f21900de0024b54ad5bf006636a0b89c354
                                         {{ $note->title }}
                                     </a>
                                     <span class="pull-right">{{ $note->updated_at->diffForHumans() }}</span>
@@ -61,14 +90,19 @@
                             @endforeach
                         </ul>
                         @endif
-                        <br>
-                        <div class="panel-heading notes-heading">Class notes</div>
-                    </div>
+                       </div>
+                       
+                       
                 </div>
             </div>
         </div>
-        <a href="{{ route('notes.create', $course->course_slug) }}">Create one</a>
+        
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>

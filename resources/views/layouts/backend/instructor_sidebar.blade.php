@@ -20,6 +20,11 @@
                 <span class="site-menu-title">Courses</span>
             </a>
         </li>
+        <li class="site-menu-item {{ request()->is('instructor-course-*') ? 'active' : '' }}">
+                <i class="site-menu-icon fas fa-chalkboard" aria-hidden="true"></i>
+                <span class="site-menu-title">Quiz</span>
+            </a>
+        </li>
 
       </ul>
 

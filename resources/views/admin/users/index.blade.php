@@ -72,7 +72,12 @@
                   <a href="{{ url('admin/user-form/'.$user->id) }}" class="btn btn-xs btn-icon btn-inverse btn-round" data-toggle="tooltip" data-original-title="Edit">
                     <i class="icon wb-pencil" aria-hidden="true"></i>
                   </a>
+
+                  <a class="delete-record btn btn-xs btn-icon btn-inverse btn-round" data-toggle="tooltip" data-original-title="Delete" >
+                    <i class="icon wb-trash" aria-hidden="true"></i>
+                  </a>
                 </td>
+
               </tr>
               @endforeach
             </tbody>

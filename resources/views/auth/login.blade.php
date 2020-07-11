@@ -16,8 +16,8 @@
                         {{ csrf_field() }}
                         <div class="p-4">
                             <div class="form-group">
-                                <label>Student ID</label>
-                                <input name="email" type="text" class="form-control form-control-sm" placeholder="Student ID" value="{{ old('email') }}">
+                                <label>Email ID</label>
+                                <input name="email" type="text" class="form-control form-control-sm" placeholder="Email ID" value="{{ old('email') }}">
                                 @if ($errors->has('email'))
                                 <label class="error" for="email">{{ $errors->first('email') }}</label>
                                 @endif

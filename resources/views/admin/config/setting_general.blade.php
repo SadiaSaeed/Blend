@@ -91,40 +91,6 @@
               </div>
             </div>
 
-            <div class="form-group col-md-4">
-              <label class="form-control-label">Fav Icon</label>
-              <div class="input-group input-group-file" data-plugin="inputGroupFile">
-                <input type="text" class="form-control" id="fav_icon_read" readonly="">
-                <input type="hidden" name="old_fav_icon" value="{{ isset($config['fav_icon']) ? $config['fav_icon'] : '' }}">
-                <span class="input-group-btn">
-                  <span class="btn btn-success btn-file">
-                    <i class="icon wb-upload" aria-hidden="true"></i>
-                    <input type="file" name="fav_icon" class="item-img" id="fav_icon">
-                  </span>
-                </span>
-              </div>
-              <div class="row">
-                 <div class="col-md-6">
-                  <span style="font-size: 10px;">
-                    Extensions: ico 
-                    <br>Dimesnion: 16px X 16px
-                    <br> Max File Size: 1MB
-                  </span>
-                  </div>
-                  @if(isset($config['fav_icon']) && Storage::exists($config['fav_icon']))
-                  <div class="col-md-6 pl-0 mt-2">
-                    <img src="{{ Storage::url($config['fav_icon']) }}" width="16px" height="16px">
-                  </div>
-                  @endif
-              </div>
-            </div>
-
-            <div class="form-group col-md-4">
-              <label class="form-control-label">Admin Email</label>
-              <input type="text" class="form-control" name="admin_email" 
-                placeholder="Admin Email" value="{{ isset($config['admin_email']) ? $config['admin_email'] : '' }}" />
-            </div>
-
         </div>
 
       <hr>

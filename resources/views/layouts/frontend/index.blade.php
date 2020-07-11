@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="robots" content="all,follow">
+        <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.ico ') }}">
         <!-- Bootstrap CSS-->
         <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
